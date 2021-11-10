@@ -1,21 +1,31 @@
-const { readFile, writeFile } = require("fs");
+const { readFile } = require("fs");
+const { resolve } = require("path");
 
-const green = readFile("this.txt", "utf8", (err, data) => {
-  if (err) {
-    console.log(err);
-    return;
-  }
-  console.log(data);
-});
+const getText = (path) => {
+  return new Promise((resolve, reject) => {
+    readFile(path, "utf8", (err, data) => {
+      if (err) {
+        reject(err);
+        return;
+      } else {
+        resolve(data);
+      }
+    });
+  });
+};
 
-const ready = writeFile(
-  "./Good Content",
-  "I like this content part very well",
-  (err, data) => {
-    if (err) {
-      console.log(err);
-      return;
-    }
-    console.log(data);
+const start = async () => {
+  try {
+    const first = await getText("thus.txt");
+    const second = await getText("this.txt");
+    console.log(first, second);
+  } catch (error) {
+    console.log(error);
   }
-);
+};
+
+start();
+
+//getText("this.txt")
+//.then((result) => console.log(result))
+//.catch((err) => console.log(err));
