@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+  <head>
+    <title> MY FIRST WEBSITE </title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" type="text/css" href= "website.css">
+       
+  </head>
+  <body>
+      <h1> Real Project </h1>
+      <div class="go">
+        <div class="icon">
+            <a class="act" href="#"><i class="fa fa-home"></i></a>
+            <a href="#"><i class="fa fa-search"></i></a>
+            <a href="#"><i class="fa fa-envelope"></i></a>
+            <a href="#"><i class="fa fa-globe"></i></a>
+            <a href="#"><i class="fa fa-trash"></i></a>
+            <a href="#"><i class="fa fa-phone"></i></a>
+        </div>
+        <div class="container" onclick="myFunction(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+      </div>
+    <h1> TAB </h1>
+    <!-- Tab links -->
+    <div class="tab">
+      <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">London</button>
+      <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
+      <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+    </div>
+    
+    <!-- Tab content -->
+    <div id="London" class="tabcontent">
+      <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+      <h3>London</h3>
+      <p>London is the capital city of England.</p>
+    </div>
+    
+    <div id="Paris" class="tabcontent">
+      <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+      <h3>Paris</h3>
+      <p>Paris is the capital of France.</p>
+    </div>
+    
+    <div id="Tokyo" class="tabcontent">
+      <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+      <h3>Tokyo</h3>
+      <p>Tokyo is the capital of Japan.</p>
+    </div>
+    
+    </div>
+
+    <h1>Collapsibles/Accordion</h1>
+    <button class="accordion"> RESPONSE 1 </button>
+    <div class="panel">
+      <p> The message to be passed accross 1</p>
+    </div>
+    <button class="accordion"> RESPONSE 2 </button>
+    <div class="panel">
+      <p> The message to be passed accross 2</p>
+    </div>
+    <button class="accordion"> RESPONSE 3 </button>
+    <div class="panel">
+      <p> The message to be passed accross 3</p>
+    </div>
+    <button class="accordion"> RESPONSE 4 </button>
+    <div class="panel">
+      <p> The message to be passed accross 4</p>
+    </div>
+ 
+    <script src="website.js"></script>
+  </body>
