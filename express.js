@@ -5,9 +5,9 @@ const app = express();
 // setup static and middleware
 app.use(express.static("public"));
 
-app.get("/", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "../HTML AND CSS/assignment.html"));
-});
+//app.get("/", (req, res) => {
+//  res.sendFile(path.resolve(__dirname, "../HTML AND CSS/assignment.html"));
+//});
 
 app.all("*", (req, res) => {
   res.status(404).send("<h1> Oops Not Found </h1>");
